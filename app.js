@@ -1,61 +1,35 @@
-const firstName = 'William';
-const lastName = 'Johnson';
-const age = 36;
-const str = 'Hello there my name is Jason';
-const tags = 'web design, web development,programming';
-let val;
+const name = 'John';
+const age = 30;
+const job = 'Web Developer';
+const city = 'Miami';
+let html;
 
-val = firstName + lastName;
- 
-// Concatenation
-val = firstName + ' ' + lastName;
+// Without template strings (es5)
+html = '<ul><li>Name: '+ name + '  </li><li>Age: ' + age + ' </li><li>Job: ' + job + ' </li><li>City: ' + city + ' </li></ul>';
 
-// Append
-val = 'Jason ';
-val += 'Paredes';
+html = '<ul>' +
+      '<li>Name: '+ name + ' </li>' +
+      '<li>Age: '+ age + '  </li>'  +
+      '<li>Job: '+ job + '  </li>'  +
+      '<li>City: '+ city + ' </li>';
+      '</ul>';
 
-val = 'Hello my name is ' + firstName + ' and I am ' + age;
 
-// Escaping
-val = 'That\'s awesome I can\'t wait'; 
+function hello(){
+  return 'hello';
+} 
 
-// length 
-val = firstName.length;
+// With template strings (es6)
+html = `
+  <ul>
+    <li>Name: ${name}</li>
+    <li>Age: ${age}</li>
+    <li>Job: ${job}</li>
+    <li>City ${city}</li>
+    <li>${2 + 2}</li>
+    <li>${hello()}</li>
+    <li>${age > 30 ? 'Over 30' : 'Under 30'}</li>
+  </ul>
+`;
 
-// concat
-val = firstName.concat(' ' , lastName);
-
-// Change case
-val = firstName.toUpperCase();
-val = firstName.toLowerCase();
-
-val = firstName[2];
-
-// indexof()
-val = firstName.indexOf('l');        // from left to right 0,1,2
-val = firstName.lastIndexOf('l');    // from right to left 0,1,2
-
-// charAt()
-val = firstName.charAt('2');
-
-// Get last char 
-val = firstName.charAt(firstName.length -1);
-
-// substring ()
-val = firstName.substring(0, 4);
-
-// slice()  mostly used with arrays
-val = firstName.slice(0,4);
-val = firstName.slice(-3);  // last 3 from string  iam
-
-// split()
-val = str.split(' ');
-val = tags.split(',');
-
-// replace()
-val = str.replace('Jason', 'Jack');
-
-// includes()
-val = str.includes('Hello');
-console.log(val);
-
+document.body.innerHTML = html;
