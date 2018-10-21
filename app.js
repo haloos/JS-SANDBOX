@@ -1,35 +1,40 @@
-const name = 'John';
-const age = 30;
-const job = 'Web Developer';
-const city = 'Miami';
-let html;
+const person = {
+  firstName: 'Steve',
+  lastName: 'Smith',
+  age : 30,
+  email: 'steve@aol.com',
+  hobbies: ['music', 'sports'],
+  address: {
+    city: 'Miami',
+    state: 'FL'
+  },
+  getBirthYear: function(){
+   return 2018 - this.age;  // sub tracts what in age
+  }  
+}
 
-// Without template strings (es5)
-html = '<ul><li>Name: '+ name + '  </li><li>Age: ' + age + ' </li><li>Job: ' + job + ' </li><li>City: ' + city + ' </li></ul>';
+let val;
 
-html = '<ul>' +
-      '<li>Name: '+ name + ' </li>' +
-      '<li>Age: '+ age + '  </li>'  +
-      '<li>Job: '+ job + '  </li>'  +
-      '<li>City: '+ city + ' </li>';
-      '</ul>';
+val = person;
+// Get specific value
+val = person.firstName;  // recommed way
+val = person['lastName'];
+val = person.age;
+val = person.hobbies[1];
+val = person.address.state;
+val = person.address['city'];
+val = person.getBirthYear();
 
 
-function hello(){
-  return 'hello';
-} 
+console.log(val);
 
-// With template strings (es6)
-html = `
-  <ul>
-    <li>Name: ${name}</li>
-    <li>Age: ${age}</li>
-    <li>Job: ${job}</li>
-    <li>City ${city}</li>
-    <li>${2 + 2}</li>
-    <li>${hello()}</li>
-    <li>${age > 30 ? 'Over 30' : 'Under 30'}</li>
-  </ul>
-`;
 
-document.body.innerHTML = html;
+const people  = [
+  {name: 'John', age: 30},
+  {name: 'Mike', age: 23},
+];
+
+for(let i = 0; i < people.length; i++){
+  console.log(people[i].name);
+}
+
