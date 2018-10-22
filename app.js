@@ -1,7 +1,13 @@
- // Create some arrays 
-const numbers = [43,56,33,23,36,5];  // Most popular way
-const numbers2 = new Array(22,45,33,76,54);
-const fruit = ['Apple', 'Orange', 'Pear'];
-const mixed = [23, 'Hello', true, undefined, null, {a:1, b:1}, new Date() ];
+let val; 
 
-console.log(mixed);
+const today = new Date();     
+let birthday = new Date('9-10-1981 11:25:00');  // line 4,5,6 good examples of adding birthdays
+birthday = new Date('September 10 1981');
+birthday = new Date('9/10/1981');
+
+val = today.getMonth();   // Month starts at zero
+val = today.getDate();
+val = today.getDay();
+
+
+console.log(val);
