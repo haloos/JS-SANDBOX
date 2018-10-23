@@ -58,9 +58,9 @@ cars.forEach(function(car,index,array){   // Recommend way to loop through an ar
 //const ids = users.map(function(user){
   //return user.id;
 //});
-
 //console.log(ids);
 
+// FOR in loop
 const user = {
   firstName: 'John',
   lastName: 'Smith',
