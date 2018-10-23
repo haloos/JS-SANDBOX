@@ -1,18 +1,78 @@
-// FOR LOOP
+// FOR LOOP       "Use when you know how many times going to run"
 
-for(let i = 0; i < 10; i++){
+//for(let i = 0; i < 10; i++){
   //console.log('Number ' + i);
-  if(i === 2){
-    console.log('2 is my favorite number'); // add words into the loop(keeps number2)
-    continue;   // "Stops loop here without conting next interation" (no number2)
-  }
+  //if(i === 2){
+    //console.log('2 is my favorite number'); // add words into the loop(keeps number2)
+    //continue;   // "Stops loop here without conting next interation" (no number2)
+  //}
 
-  if(i === 5){
-    console.log('Stop the loop');
-    break;
-  }
-  console.log('Number '+ i);   // "Really important statements to learn"
+  //if(i === 5){
+    //console.log('Stop the loop');
+    //break;
+  //}
+  //console.log('Number '+ i);   // "Really important statements to learn"
+//}     
+
+// While loop     "Use when unclear how many times to run"
+
+//let i = 0;
+
+//while(i < 10){
+  //console.log('Number ' + i);
+  //i++;    // Maker sure increment is inside while loop
+//}
+
+// Do While loop
+
+//let i = 0;
+
+//do {        //Do will always run  
+  //console.log('Number ' + i);
+  //i++;
+//}
+
+//while(i < 10);
+
+// Loop Through Array
+const cars = ['Ford','Chevy','Honda','Toyata'];
+
+//for(let i = 0; i < cars.length; i++){
+  //console.log(cars[i]);
+//}
+
+// Foreach loop
+cars.forEach(function(car,index,array){   // Recommend way to loop through an array
+  console.log(`${index} : ${car}`);
+  console.log(array);
+})
+
+// MAP
+
+//const users = [
+  //{id: 1, name: 'John'},
+  //{id: 2, name: 'Sara'},
+  //{id: 3, name: 'Karen'},
+//];
+  
+//const ids = users.map(function(user){
+  //return user.id;
+//});
+
+//console.log(ids);
+
+const user = {
+  firstName: 'John',
+  lastName: 'Smith',
+  age: 30,
 }
+
+for(let x in user){
+  console.log(`${x} : ${user[x]}`);
+}
+
+
+
 
 
 
