@@ -1,85 +1,40 @@
-//  WINDOW METHODS / OBJECTS / PROPERTIES
-
-// Alert
-//alert('Helo World');      // Recommend errs on form vaulidation (old school)
-
-// Prompt
-//const input = prompt();
-//alert(input);
-
-// Confirm
-//if(confirm('Are you sure')){
-  //console.log('YES');
- //} else {
-  //console.log('NO');
- // }
-
 let val;
 
-// Putter height and width
-val = window.outerHeight;
-val = window.outerWidth;
+val = document;
+val = document.all;
+val = document.all[2];
+val = document.all.length;
+val = document.head;
+val = document.body;
+val = document.doctype;
+val = document.domain;
+val = document.URL;
+val = document.characterSet;
+val = document.contentType;
 
-// Inner height and width
-val = window.innerHeight;
-val = window.innerWidth;
+val = document.forms;
+val = document.forms[0];
+val = document.forms[0].id;
+val = document.forms[0].method;
+val = document.forms[0].action;
 
-// Scroll points
-val = window.scroLLY;
-val = window.scroLLX;
+val = document.links;
+val = document.links[0];
+val = document.links[0].id;
+val = document.links[0].className;
+val = document.links[0].classList[0];
 
+val = document.images;
 
-// Location Object
-val = window.location;
-val = window.location.hostname;
-val = window.location.port;
-val = window.location.href;
-val = window.location.search;
+val = document.scripts;
+val = document.scripts[2].getAttribute('src');
 
-// Redirect
-//window.location.href = 'http://google.com';
+let scripts = document.scripts;
 
-// Reload 
-//window.location.reload();    // only usuable with a function 
+let scriptsArr = Array.from(scripts);
 
-// History Object 
-//window.history.go(-1);
-//val = window.history.length;
-
-// Navigator Object
-val = window.navigator;
-val = window.navigator.appName;
-val = window.navigator.appVersion;
-val = window.navigator.userAgent;
-val = window.navigator.platform;
-val = window.navigato.vendor;
-val = window.navigator.language;
-
-
-
-
-
-
-
-
-
-
+scriptsArr.forEach(function(script) {
+  console.log(script.getAttribute('src'));
+});
 
 console.log(val);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
