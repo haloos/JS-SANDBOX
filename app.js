@@ -1,3 +1,4 @@
+
 // document.getElementById()
 
 //console.log(document.getElementById('task-title'));
@@ -32,22 +33,4 @@ document.querySelector('li:last-child').style.color = 'red';
 document.querySelector('li:nth-child(3)').style.color = 'yellow';
 document.querySelector('li:nth-child(odd)').style.background = '#ccc';
 document.querySelector('li:nth-child(even)').style.background = 'f4f4f4';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
