@@ -1,31 +1,38 @@
-// Global Scope
-var a = 1;
-let b = 2;
-const c = 3;
+// document.getElementById()
 
+//console.log(document.getElementById('task-title'));
 
-//function test(){            // Seperate Variable because of dif scope
-//var a = 4;
-//let b = 5;
-//const c = 6;
-//console.log('Function Scope: ', a, b, c,);
-//}
-//test();
+// Get things from the element
+//console.log(document.getElementById('task-title').id);
+//console.log(document.getElementById('task-title').className);
 
-//if(true) {  //Block Scope
-  // Need to watch var in block scope, they over ride the "Global scope" (security issues)
-//var a = 4;
-//let b = 5;
-//const c = 6;
-//console.log('If Scope: ', a, b, c,);
+//const taskTitle = document.getElementById('task-title')
 
-//}
+// Change styling
+//taskTitle.style.background = '#333';
+//taskTitle.style.color = '#fff';
+//taskTitle.style.padding = '5px';
+// taskTitle.style.display = 'none;
 
-for(let a = 0; a < 10; a ++){
-console.log(`Loop: ${a}`);
-}
+// Change content
 
-console.log('Global Scope: ', a, b, c,);
+//taskTitle.textContent = 'Task List';
+//taskTitle.innerText = 'My Tasks';
+//taskTitle.innerHTML = '<span style="color:red">Task list</span>';
+
+// document.querySelector()
+
+console.log(document.querySelector('#task-title'));
+console.log(document.querySelector('.card-title'));
+console.log(document.querySelector('h5'));
+
+document.querySelector('li').style.color = 'red';
+document.querySelector('ul li').style.color = 'blue';
+document.querySelector('li:last-child').style.color = 'red';
+document.querySelector('li:nth-child(3)').style.color = 'yellow';
+document.querySelector('li:nth-child(odd)').style.background = '#ccc';
+document.querySelector('li:nth-child(even)').style.background = 'f4f4f4';
+
 
 
 
