@@ -1,3 +1,4 @@
+
 // Replace Element
 
 // Create Element
@@ -52,3 +53,15 @@ link.removeAttribute('title');
 val = link;
 
 console.log(val);
+
+
+
+
+
+
+
+
+
+
+
+
