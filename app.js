@@ -1,89 +1,54 @@
-<<<<<<< HEAD
+// Replace Element
+
+// Create Element
+const newHeading = document.createElement('h2');
+
+// Add id
+newHeading.id = 'task-title';
+
+// New text node
+newHeading.appendChild(document.createTextNode('Task List'));
+
+// Get the old heading 
+const oldHeading = document.getElementById('task-title');
+
+// Parent
+const cardAction = document.querySelector('.card-action');
+
+// Replace
+cardAction.replaceChild(newHeading, oldHeading);
+
+// Remove element
+const lis = document.querySelectorAll('li');
+const list = document.querySelector('ul');
+
+// Remove list item
+lis[0].remove();
+
+// Remove child element 
+list.removeChild(lis[3]);
+
+// Classes & Attr
+const firstLi = document.querySelector('li:first-child');
+const link = firstLi.children[0];
+
 let val;
 
-val = document;
-val = document.all;
-val = document.all[2];
-val = document.all.length;
-val = document.head;
-val = document.body;
-val = document.doctype;
-val = document.domain;
-val = document.URL;
-val = document.characterSet;
-val = document.contentType;
+// Classes 
 
-val = document.forms;
-val = document.forms[0];
-val = document.forms[0].id;
-val = document.forms[0].method;
-val = document.forms[0].action;
+val = link.className;
+val = link.classList;
+val = link.classList[0];
+link.classList.add('test');
+link.classList.remove('test');
+val = link;
 
-val = document.links;
-val = document.links[0];
-val = document.links[0].id;
-val = document.links[0].className;
-val = document.links[0].classList[0];
-
-val = document.images;
-
-val = document.scripts;
-val = document.scripts[2].getAttribute('src');
-
-let scripts = document.scripts;
-
-let scriptsArr = Array.from(scripts);
-
-scriptsArr.forEach(function(script) {
-  console.log(script.getAttribute('src'));
-});
+// Attributes
+val = link.getAttribute('href');
+val = link.setAttribute('href', 'http://google.com');
+link.setAttribute('title', 'Google');
+val = link.hasAttribute('title');
+link.removeAttribute('title');
+val = link;
 
 console.log(val);
-=======
-// Global Scope
-var a = 1;
-let b = 2;
-const c = 3;
-
-
-//function test(){            // Seperate Variable because of dif scope
-//var a = 4;
-//let b = 5;
-//const c = 6;
-//console.log('Function Scope: ', a, b, c,);
-//}
-//test();
-
-//if(true) {  //Block Scope
-  // Need to watch var in block scope, they over ride the "Global scope" (security issues)
-//var a = 4;
-//let b = 5;
-//const c = 6;
-//console.log('If Scope: ', a, b, c,);
-
-//}
-
-for(let a = 0; a < 10; a ++){
-console.log(`Loop: ${a}`);
-}
-
-console.log('Global Scope: ', a, b, c,);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> 299957d5588aff9471917d26ba7c8823aa93aea0
